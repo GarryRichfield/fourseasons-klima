@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Content } from '../md/futes-klimaval.md';
+const title = 'Fűtés klímával — tényleg olcsóbb? Őszinte útmutató | Four Seasons Klíma';
+const description = 'Mennyit spórol a klímás fűtéssel? Kinek éri meg és kinek nem? Őszinte, túlzások nélküli útmutató inverteres klímával történő fűtésről Budapesten és Pest megyében.';
+---
+<Layout title={title} description={description}>
+  <main class="legal article">
+    <Content />
+    <div class="article-cta">
+      <p>Kíváncsi, az Ön otthonában mennyibe kerülne egy klíma telepítése?</p>
+      <a href="/#calc" class="btn btn-primary">Számoljon árat a kalkulátorral</a>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .legal{max-width:780px;margin:0 auto;padding:32px 22px 80px;color:#22323a;line-height:1.75;font-family:Inter,system-ui,sans-serif}
+  .legal :global(h1){font-family:'Space Grotesk',system-ui,sans-serif;font-size:2rem;color:#0D5466;margin:8px 0 10px;letter-spacing:-.01em;line-height:1.2}
+  .legal :global(h2){font-family:'Space Grotesk',system-ui,sans-serif;font-size:1.3rem;color:#0D5466;margin:34px 0 8px}
+  .legal :global(h3){font-family:'Space Grotesk',system-ui,sans-serif;font-size:1.08rem;color:#0F1E2B;margin:24px 0 6px}
+  .legal :global(a){color:#149a6e}
+  .legal :global(strong){color:#0F1E2B}
+  .legal :global(ul),.legal :global(ol){padding-left:22px}
+  .legal :global(li){margin:6px 0}
+  .legal :global(table){border-collapse:collapse;width:100%;margin:16px 0;font-size:.94rem}
+  .legal :global(th),.legal :global(td){border:1px solid #d8e3e7;padding:8px 12px;text-align:left;vertical-align:top}
+  .legal :global(th){background:#eef5f7}
+  .legal :global(blockquote){border-left:3px solid #23C3D4;margin:16px 0;padding:8px 16px;background:#f1f8fa;color:#33525c}
+  .legal :global(hr){border:none;border-top:1px solid #e4ecef;margin:28px 0}
+  .article-cta{margin-top:40px;padding:26px;background:#eef5f7;border-radius:16px;text-align:center}
+  .article-cta p{margin:0 0 14px;font-weight:600;color:#0D5466}
+</style>

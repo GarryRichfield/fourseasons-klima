@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Four Seasons Klíma">
+  <title>Four Seasons Klíma</title>
+  <defs><clipPath id="fv"><circle cx="32" cy="32" r="29"/></clipPath></defs>
+  <g clip-path="url(#fv)">
+    <rect width="32" height="64" fill="#F2784B"/>
+    <rect x="32" width="32" height="64" fill="#0D5466"/>
+  </g>
+  <line x1="32" y1="3" x2="32" y2="61" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+  <circle cx="19" cy="32" r="5.4" fill="#fff"/>
+  <g stroke="#fff" stroke-width="2.8" stroke-linecap="round">
+    <line x1="19" y1="20.6" x2="19" y2="17"/>
+    <line x1="19" y1="47" x2="19" y2="43.4"/>
+    <line x1="8.2" y1="32" x2="11.8" y2="32"/>
+  </g>
+  <g stroke="#fff" stroke-width="2.8" stroke-linecap="round">
+    <line x1="45" y1="20" x2="45" y2="44"/>
+    <line x1="34.6" y1="26" x2="55.4" y2="38"/>
+    <line x1="55.4" y1="26" x2="34.6" y2="38"/>
+  </g>
+</svg>

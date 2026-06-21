@@ -1,0 +1,489 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Klímatelepítés Pest megyében</span>
+      <h1 style="margin-top:18px">Nyáron <span class="cool">hűt</span>, télen <span class="warm-t">fűt</span> — és előre tudja az árát.</h1>
+      <p class="lead">Válassza ki a készüléket, adja meg a helyiség adatait, és másodpercek alatt megkapja a teljes telepítés árát — kötelezettség nélkül.</p>
+      <div class="hero-cta">
+        <a href="#calc" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 7h6M9 11h6M9 15h3"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg>
+          Árkalkuláció indítása
+        </a>
+        <a href="#units" class="btn btn-ghost">Klímák megtekintése</a>
+      </div>
+      <div class="trust-row">
+        <div class="ti"><span class="v num">5 éve</span><span class="l">a szakmában</span></div>
+        <div class="ti"><span class="v num">200+</span><span class="l">telepített klíma</span></div>
+        <div class="ti"><span class="v num">5 év</span><span class="l">gyári garancia</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <span class="hf-badge"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="m12 2 2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>Legnépszerűbb választás</span>
+      <div class="hero-card">
+        <div class="hf-img"><img id="heroImg" alt=""></div>
+        <div class="hf-body">
+          <h3 id="heroName">—</h3>
+          <div class="hf-brand" id="heroBrand">—</div>
+          <div class="hf-specs" id="heroSpecs"></div>
+          <div class="hf-foot">
+            <div class="hf-price"><span>Berendezés ára</span><b id="heroPrice">—</b></div>
+            <a href="#calc" class="btn btn-primary hf-cta">Árat számolok</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HEATING STRIP -->
+<div class="heatstrip">
+  <div class="wrap">
+    <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2s4 4 4 8a4 4 0 0 1-8 0c0-4 4-8 4-8z"/><path d="M9 16a3 3 0 0 0 6 0"/></svg></span>
+    <div>
+      <h3>A modern klíma télen is fűt — gazdaságosan</h3>
+      <p>Az inverteres készülékek 1 kWh áramból 3–5 kWh hőt adnak, így a hagyományos elektromos fűtésnél akár 4–5× hatékonyabbak, és −25 °C-ig is megbízhatóan működnek. Kérdezzen rá a hatékony, fűtésre is alkalmas modellekre.</p>
+    </div>
+    <div class="stat"><div class="v num">4–5×</div><div class="l">hatékonyabb fűtés</div></div>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div>
+      <span class="eyebrow">Bemutatkozás</span>
+      <h2 style="font-size:clamp(1.8rem,3.4vw,2.4rem);margin-top:14px;font-weight:700">Szakszerű telepítés, tiszta munka, korrekt ár.</h2>
+      <p style="color:var(--ink-soft);margin-top:14px;font-size:1.05rem">Polyák Gergely vagyok, egyéni vállalkozó. Lakásokba és családi házakba telepítek klímát Budapesten és Pest megyében — egyedül dolgozom, így a felméréstől az üzembe helyezésig mindent én végzek, nem alvállalkozók.</p>
+      <div class="feat-list">
+        <div class="feat">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span>
+          <div><h4>F-gáz és villanyszerelői jogosultság</h4><p>Minden telepítés engedélyezett, garanciálisan dokumentált.</p></div>
+        </div>
+        <div class="feat">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2s4 4 4 8a4 4 0 0 1-8 0c0-4 4-8 4-8z"/></svg></span>
+          <div><h4>Fűtésre is alkalmas megoldások</h4><p>Segítek kiválasztani a helyiséghez illő, télen is hatékonyan fűtő készüléket.</p></div>
+        </div>
+        <div class="feat">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-6 9 6v11a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg></span>
+          <div><h4>Ingyenes helyszíni felmérés</h4><p>A kalkulátor tájékoztató; a végleges árat felmérés után, írásban rögzítjük.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="about-card">
+      <p class="quote">„Egy jól megtervezett klíma nyáron csendben hűt, télen pedig olcsóbban fűthet, mint egy elavult fűtésrendszer. Spórolja meg a rezsiszámlán a telepítés árát.”</p>
+      <div class="sig">
+        <span class="av">PG</span>
+        <div><div class="n">Polyák Gergely</div><div class="t">egyéni vállalkozó, klímaszerelő</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="units">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Elérhető klímák</span>
+      <h2>Telepíthető készülékek</h2>
+      <p>Bevált, jó ár-értékű modellek hűtésre és fűtésre. A kiválasztott készülék automatikusan bekerül az árkalkulátorba.</p>
+    </div>
+    <div class="units-grid" id="unitsGrid"></div>
+  </div>
+</section>
+
+<section class="calc" id="calc">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Árkalkulátor</span>
+      <h2>Számolja ki a telepítés teljes árát</h2>
+      <p>A telepítés alapdíja 110 000 Ft, amely a teljes szerelést és 3 méter csővezetéket tartalmaz. Az ár élőben frissül.</p>
+    </div>
+    <div class="calc-grid">
+      <div class="panel">
+        <div class="panel-h"><h3>Helyiség és igények</h3><span class="step">1. lépés</span></div>
+        <div class="panel-b">
+          <div class="sel-unit">
+            <span class="mini"><img id="selImg" alt=""></span>
+            <div class="info"><div class="n" id="selName">—</div><div class="s" id="selSpec">Válasszon készüléket fent</div></div>
+            <span class="chg" onclick="document.getElementById('units').scrollIntoView()">Módosít</span>
+          </div>
+
+          <div class="field">
+            <label style="display:block;margin-bottom:10px">Mire használná?</label>
+            <div class="seg usecase" id="useSeg">
+              <button data-v="cool" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/></svg>Hűtés</button>
+              <button data-v="heat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2s4 4 4 8a4 4 0 0 1-8 0c0-4 4-8 4-8z"/></svg>Fűtés</button>
+              <button data-v="both">Mindkettő</button>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="field-top"><label for="area">Helyiség alapterülete</label><span class="val"><span id="areaV">25</span> m²</span></div>
+            <input type="range" id="area" min="6" max="80" value="25" step="1">
+            <div class="range-scale"><span>6 m²</span><span>80 m²</span></div>
+          </div>
+
+          <div class="field">
+            <div class="field-top"><label for="pipe">Kültéri–beltéri csőtávolság</label><span class="val"><span id="pipeV">3</span> m</span></div>
+            <input type="range" id="pipe" min="3" max="15" value="3" step="1">
+            <div class="range-scale"><span>3 m (alap)</span><span>15 m</span></div>
+          </div>
+
+          <div class="field">
+            <label class="toggle-row">
+              <span><span class="tl">Betonszerkezetű épület</span><br><span class="td">A keményebb fúrás miatt +10 000 Ft</span></span>
+              <span class="switch"><input type="checkbox" id="concrete"><span class="sl"></span></span>
+            </label>
+          </div>
+
+          <div class="field">
+            <label class="toggle-row">
+              <span><span class="tl">Dekorcsatorna a csövekre</span><br><span class="td">Esztétikus csőtakaró a falon · 1 400 Ft / méter</span></span>
+              <span class="switch"><input type="checkbox" id="dekor"><span class="sl"></span></span>
+            </label>
+          </div>
+
+          <div class="field" id="dekorLenField" style="display:none">
+            <div class="field-top"><label for="dekorLen">Dekorcsatorna hossza</label><span class="val"><span id="dekorLenV">3</span> m</span></div>
+            <input type="range" id="dekorLen" min="1" max="20" value="3" step="1">
+            <div class="range-scale"><span>1 m</span><span>20 m</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel readout">
+        <div class="panel-h"><h3>Előzetes kalkuláció</h3><span class="step">2. lépés</span></div>
+        <div class="panel-b">
+          <div class="gauge">
+            <div class="gauge-top">
+              <div class="gauge-kw">
+                <div class="lab">Ehhez a helyiséghez ajánlott</div>
+                <div class="v"><span id="needKw" class="num">3,5</span><small> kW</small></div>
+              </div>
+              <div class="cov good" id="cov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-9"/></svg><span id="covText">Ideális méret</span></div>
+            </div>
+            <div class="classbar" id="classbar">
+              <div class="classopt" data-c="2.5"><b>2,5 kW</b><span>10 m² alatt</span></div>
+              <div class="classopt" data-c="3.5"><b>3,5 kW</b><span>10–35 m²</span></div>
+              <div class="classopt" data-c="5"><b>5 kW</b><span>35 m² felett</span></div>
+            </div>
+            <div class="classnote" id="classnote"></div>
+          </div>
+
+          <div class="heatcallout" id="heatCallout" style="display:none">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2s4 4 4 8a4 4 0 0 1-8 0c0-4 4-8 4-8z"/></svg>
+            <div class="ht">Fűtésre is alkalmas: <b id="heatKwTxt">3,8 kW</b> fűtőteljesítmény. Az inverteres klíma 1 kWh áramból 3–5 kWh hőt ad.</div>
+          </div>
+
+          <div class="lines" id="lines"></div>
+
+          <div class="total">
+            <div class="tl">Kalkulált teljes ár</div>
+            <div class="tv"><span id="totalV" class="num">—</span> <small>Ft</small></div>
+            <p class="disc">Tartalmazza a készüléket, a teljes szerelést és 3 m csővezetéket. A pontos ajánlatot ingyenes helyszíni felmérés után, írásban adjuk.</p>
+            <button class="btn btn-primary" onclick="requestCallback()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.5-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
+              Kérek visszahívást ezzel a kalkulációval
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="arak">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Szolgáltatások</span>
+      <h2>Klímaszervíz árak</h2>
+      <p>A telepítés mellett a meglévő klímáját is karbantartom és javítom. Az alábbi árak tájékoztató jellegűek — a pontos összeget a gép állapota alapján egyeztetjük.</p>
+    </div>
+
+    <div class="clean-feature">
+      <div class="cf-left">
+        <span class="cf-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Évente ajánlott karbantartás</span>
+        <h3>Klímatisztítás</h3>
+        <div class="cf-price">20 000 Ft</div>
+        <p class="cf-lead">A klíma a használat során port, párát és szerves szennyeződést gyűjt a szűrőkben és a hőcserélőn. Ez nemcsak a befújt levegő minőségét rontja — a fogyasztást is megnöveli. Egy alapos, szakszerű tisztítás a legolcsóbb módja annak, hogy egészséges legyen a levegő, és sokáig kitartson a készülék.</p>
+        <ul class="cf-benefits">
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Egészségesebb levegő.</b> <span class="txt">A nedves, meleg belső tér ideális a baktériumok, a penész és a gombák szaporodásához — és pont ezt fújja szét a szobában. Tisztítás után tiszta levegőt lélegez be; különösen fontos ott, ahol kisgyerek vagy allergiás él.</span></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Megszűnik a dohos szag.</b> <span class="txt">A bekapcsoláskor érezhető kellemetlen szag oka szinte mindig a szennyezett párologtató és a pangó víz — a tisztítás megszünteti.</span></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Alacsonyabb rezsi, jobb teljesítmény.</b> <span class="txt">Az eltömődött szűrő és hőcserélő miatt a gép többet fogyaszt, és kevésbé hűt-fűt. A tiszta készülék gyorsabban, kevesebb áramból éri el a kívánt hőmérsékletet.</span></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Hosszabb élettartam.</b> <span class="txt">A lerakódás folyamatosan terheli a kompresszort. A rendszeres karbantartás megelőzi a költséges meghibásodást — és sok gyártónál a garancia feltétele is.</span></div></li>
+        </ul>
+        <a class="btn btn-primary" href="#contact">Időpontot kérek tisztításra</a>
+      </div>
+      <div class="cf-right">
+        <div class="qmark">„A klímatisztítás nem luxus, hanem karbantartás — ugyanúgy, ahogy az autót is elviszi szervizre.”</div>
+        <div class="cf-stat">
+          <div class="v num">10–15%</div>
+          <div class="l">megtakarítás a fogyasztáson egy tiszta, jól karbantartott géppel</div>
+        </div>
+        <div class="cf-freq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Ajánlott gyakoriság: évente egyszer; sokat használt gépnél a szezon előtt és után is.</div>
+      </div>
+    </div>
+
+    <div class="svc-grid">
+      <div class="svc">
+        <span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.4 2.4-2.1-.6-.6-2.1 2.4-2.4z"/></svg></span>
+        <h4>Klíma leszerelése</h4>
+        <div class="sdesc">Szakszerű leszerelés, a hűtőközeg előírás szerinti leszívásával — például költözés vagy homlokzatfelújítás előtt.</div>
+        <div class="sprice">25 000 Ft</div>
+      </div>
+      <div class="svc">
+        <span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.3 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.3a2 2 0 0 0-3.4 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
+        <h4>Hibajavítás</h4>
+        <div class="sdesc">Hibafeltárás és javítás a helyszínen. Nem hűt vagy fűt rendesen, csöpög, hibakódot ír ki? Megnézem és megoldom.</div>
+        <div class="sprice">15 000 Ft <small>kiszállás</small><br><span class="plus">+ 10 000 Ft</span> <small>/ megkezdett óra</small></div>
+      </div>
+      <div class="svc quote">
+        <span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span>
+        <h4>Klíma gáz töltése</h4>
+        <div class="sdesc">Ha a gép idővel veszített a hűtőerejéből, a hűtőközeg pótlása segíthet. Az ár a gáz típusától és mennyiségétől függ.</div>
+        <div class="sprice">Egyedi ajánlat</div>
+      </div>
+    </div>
+
+    <p class="svc-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg>Az árak bruttó, tájékoztató jellegű összegek Budapest és Pest megye területén. A végleges árat a helyszíni állapot alapján egyeztetjük.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <span class="eyebrow">Kapcsolat</span>
+      <h2 style="margin-top:14px">Hagyja meg az elérhetőségét</h2>
+      <p>Visszahívom, egyeztetjük az ingyenes felmérés időpontját, és véglegesítjük az árat.</p>
+      <div class="ci-list">
+        <div class="ci"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.5-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg></span><div><div class="t">Telefon</div><div class="v">+36 20 504 4161</div></div></div>
+        <div class="ci"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><div class="t">E-mail</div><div class="v">fourseasons.gergely@gmail.com</div></div></div>
+        <div class="ci"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="t">Szervizterület</div><div class="v">Budapest és Pest megye</div></div></div>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <div id="formInner">
+        <div class="attach" id="attachBox" style="display:none">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          <span id="attachText"></span>
+        </div>
+        <div class="fgroup"><label for="cname">Név</label><input type="text" id="cname" placeholder="Teljes név" autocomplete="name"></div>
+        <div class="frow">
+          <div class="fgroup"><label for="cphone">Telefonszám</label><input type="tel" id="cphone" placeholder="+36 ..." autocomplete="tel"></div>
+          <div class="fgroup"><label for="cemail">E-mail</label><input type="email" id="cemail" placeholder="pelda@email.hu" autocomplete="email"></div>
+        </div>
+        <div class="fgroup"><label for="cmsg">Üzenet (opcionális)</label><textarea id="cmsg" placeholder="Pl. mikor lenne alkalmas a felmérés?"></textarea></div>
+        <label class="consent"><input type="checkbox" id="cconsent"><span>Hozzájárulok, hogy a megadott adataimat a visszahívás és árajánlat céljából kezeljék. Részletek az <a href="/adatkezeles">Adatkezelési tájékoztatóban</a>.</span></label>
+        <button class="btn btn-dark submit-btn" onclick="submitForm()">Visszahívást kérek</button>
+      </div>
+      <div class="success" id="success">
+        <div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-9"/></svg></div>
+        <h3>Köszönjük, megkaptuk!</h3>
+        <p>Hamarosan keresem Önt a megadott elérhetőségen. A beérkezett adatok:</p>
+        <div class="recap" id="recap"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+/* =================================================================
+   VALÓS KÉSZÜLÉKEK — Four Seasons Klíma eladási áraival.
+   • "price": mind a 13 ár a megerősített eladási ár (bruttó Ft).
+   • "img": valós ceklima termékfotók (URL). FIGYELEM: a TCL Elite 5 kW képe
+     ideiglenesen a TCL Elite 3,5 fotója — a sajátját még pótolni kell.
+     Az URL-ek böngészőben töltődnek; éles oldalon saját tárhelyre kerülnek.
+   • "cool"/"heatKw": hűtő/fűtő kW; a hűtés vezérli a méretajánlót.
+   ================================================================= */
+const IMG = 'https://www.ceklima.hu/';
+const UNITS = [
+  {id:'gree-cp35',     name:'Gree Comfort Pro 3,5 kW',   brand:'Gree',     cool:3.5, heatKw:3.8, en:'A++ / A+',    price:262900, real:true,  img:IMG+'GREE_COMFORT_PRO_GWH12ACCXD-K6DNA1DI_GWH12AWCXD-K6DNA1DO_KLIMA_MONO_OLDALFALI_SZETT_35KW-i79347.webp'},
+  {id:'midea-xs35',    name:'Midea Xtreme Save 3,5 kW',  brand:'Midea',    cool:3.5, heatKw:3.8, en:'A++ / A+',    price:228150, real:true,  img:IMG+'MIDEA_XTREME_SAVE_MG2X-12-SP_MSAGBU-12HRFNX_MOX102-12HFN8_35_KW_KLIMA_MONO_OLDALFALI_SZETT-i1560.webp'},
+  {id:'gree-cp27',     name:'Gree Comfort Pro 2,7 kW',   brand:'Gree',     cool:2.7, heatKw:3.0, en:'A++ / A+',    price:249800, real:true, img:IMG+'GREE_COMFORT_PRO_GWH09ACCXB-K6DNA1GI_GWH09ACCXB-K6DNA1GO_KLIMA_MONO_OLDALFALI_SZETT_27KW-i79377.webp'},
+  {id:'sinclair-sky32',name:'Sinclair SKY-3 3,2 kW',     brand:'Sinclair', cool:3.2, heatKw:3.8, en:'A++ / A+',    price:273304, real:true,  img:IMG+'SINCLAIR_SKY_3_12_SIM-12BS3I_-_SOM-12BS3O_MONO_OLFALI_SZETT_KOMPRESSZOR_ES_CSEPPTALCA_FUTES-i1910.webp'},
+  {id:'gree-cp53',     name:'Gree Comfort Pro 5,3 kW',   brand:'Gree',     cool:5.3, heatKw:5.6, en:'A++ / A+',    price:379800, real:true, img:IMG+'GREE_COMFORT_PRO_GWH18ACDXF-K6DNA1DI_GWH18ACDXF-K6DNA1DO_KLIMA_MONO_OLDALFALI_SZETT_53_KW-i79407.webp'},
+  {id:'midea-xs26',    name:'Midea Xtreme Save 2,6 kW',  brand:'Midea',    cool:2.6, heatKw:2.8, en:'A++ / A+',    price:218150, real:true,  img:IMG+'MIDEA_XTREME_SAVE_MG2X-09-SP_MSAGAU-09HRFNX_MOX102-09HFN8_26_KW_MONO_OLDALFALI_KLIMA_SZETT-i3880.webp'},
+  {id:'tcl-elite35',   name:'TCL Elite 3,5 kW',          brand:'TCL',      cool:3.5, heatKw:3.8, en:'A++ / A+',    price:220000, real:true, img:IMG+'TCL_ELITE_TAC-12CHSDXA73IFSH_TAC-12CHSDXA73IFSH_2_KLIMA_MONO_OLDALFALI_SZETT_CSEPPTALCA-i2180.webp'},
+  {id:'tcl-elite5',    name:'TCL Elite 5 kW',            brand:'TCL',      cool:5.0, heatKw:5.4, en:'A++ / A+',    price:292100, real:true, img:IMG+'TCL_ELITE_TAC-12CHSDXA73IFSH_TAC-12CHSDXA73IFSH_2_KLIMA_MONO_OLDALFALI_SZETT_CSEPPTALCA-i2180.webp'},
+  {id:'gree-cosmo35',  name:'Gree Cosmo 3,5 kW',         brand:'Gree',     cool:3.5, heatKw:3.8, en:'A++ / A+',    price:335661, real:true, img:IMG+'GREE_COSMO_GWH12AWCXD-K6DNA4DI_-_GWH12AWCXD-K6DNA1DO_KLIMA_MONO_OLDALFALI_SZETT_35KW-i335.webp'},
+  {id:'midea-xs53',    name:'Midea Xtreme Save 5,3 kW',  brand:'Midea',    cool:5.3, heatKw:5.6, en:'A++ / A+',    price:358150, real:true, img:IMG+'MIDEA_XTREME_SAVE_MG2X-18-SP_MSAGCU-18HRFNX_MOX301-18HFN8_53_KW_MONO_OLDALFALI_KLIMA_SZETT-i1575.webp'},
+  {id:'polar-opt35',   name:'Polar Optimum 3,5 kW',      brand:'Polar',    cool:3.5, heatKw:3.8, en:'A++ / A+',    price:242000, real:true,  img:IMG+'POLAR_OPTIMUM_SIEH0035SDOB_SO1H0035SDOB_KLIMA_MONO_OLDAFALI_SZETT-i910.webp'},
+  {id:'midea-aep35',   name:'Midea All Easy Pro 3,5 kW', brand:'Midea',    cool:3.5, heatKw:3.8, en:'A+++ / A+++', price:276000, real:true, img:IMG+'MIDEA_ALL_EASY_PRO_MEX-12-SP_MSEPBU-12HRFN8_MOX330-12HFN8_35_KW_KLIMA_MONO_OLDALFALI_SZETT-i3780.webp'},
+  {id:'syen-charm32',  name:'Syen Charm 3,2 kW',         brand:'Syen',     cool:3.2, heatKw:3.4, en:'A++ / A+',    price:215913, real:true, img:IMG+'SYEN_CHARM_SOH12CH-E32DA1DI_SOH12CH-E32DA1DO_KLIMA_MONO_OLDALFALI_SZETT_32KW-i2655.webp'},
+];
+
+/* DÍJSZABÁS (a megadott árazás szerint) */
+const PRICING = {
+  install: 110000,        // alapdíj: teljes szerelés + 3 m csővezeték, mindent tartalmaz
+  includedPipe: 3,        // benne lévő csőhossz (m)
+  concrete: 10000,        // betonszerkezet pótdíj
+  extraPipePerM: 10000,   // 10 000 Ft / további méter 3 m felett
+  dekorPerM: 1400         // dekorcsatorna (csőtakaró) — 1 400 Ft / méter
+};
+
+const fmtHUF = n => new Intl.NumberFormat('hu-HU',{maximumFractionDigits:0}).format(Math.round(n)) + ' Ft';
+const fmtHUFb = n => new Intl.NumberFormat('hu-HU',{maximumFractionDigits:0}).format(Math.round(n));
+const fmtKW = n => new Intl.NumberFormat('hu-HU',{minimumFractionDigits:1,maximumFractionDigits:1}).format(n);
+
+let state = { unit:UNITS[1], area:25, pipe:3, concrete:false, dekor:false, dekorLen:3, use:'cool' };
+
+function renderUnits(){
+  document.getElementById('unitsGrid').innerHTML = UNITS.map(u => `
+    <div class="unit ${u.id===state.unit.id?'is-selected':''}" data-id="${u.id}">
+      <div class="unit-img"><img src="${u.img}" alt="${u.name}" loading="lazy"></div>
+      <div class="unit-body">
+        <h3>${u.name}</h3>
+        <div class="unit-brand">${u.brand} · ${u.en}</div>
+        <div class="spec-row">
+          <div class="spec cool"><span>Hűtés</span><b>${fmtKW(u.cool)} kW</b></div>
+          <div class="spec heat"><span>Fűtés</span><b>${fmtKW(u.heatKw)} kW</b></div>
+          <div class="spec"><span>Ajánlott</span><b>${roomRange(u.cool)}</b></div>
+          <div class="spec"><span>Hűtőközeg</span><b>R32</b></div>
+        </div>
+        <div class="unit-foot">
+          <div class="unit-price"><span class="pl">Berendezés ára${u.real?'':' (becsült)'}</span><span class="pv">${fmtHUFb(u.price)} Ft</span></div>
+          <button class="selbtn" data-id="${u.id}">${u.id===state.unit.id?'Kiválasztva':'Kiválasztom'}</button>
+        </div>
+      </div>
+    </div>`).join('');
+  document.querySelectorAll('.unit, .selbtn').forEach(el=>{
+    el.addEventListener('click', ()=>{
+      const id = el.getAttribute('data-id');
+      state.unit = UNITS.find(u=>u.id===id);
+      renderUnits(); calc();
+      if(el.classList.contains('selbtn')) document.getElementById('calc').scrollIntoView({behavior:'smooth'});
+    });
+  });
+}
+
+function recoClass(area){ return area < 10 ? 2.5 : (area <= 35 ? 3.5 : 5); }
+function unitClass(cool){ return cool < 3.0 ? 2.5 : (cool < 4.5 ? 3.5 : 5); }
+function roomRange(cool){ const c=unitClass(cool); return c===2.5?'10 m² alatt':(c===3.5?'10–35 m²':'35 m² felett'); }
+
+function calc(){
+  const u = state.unit;
+  const reco = recoClass(state.area);
+  const uClass = unitClass(u.cool);
+  document.getElementById('needKw').textContent = fmtKW(reco);
+
+  // highlight the recommended class + the selected unit's class
+  document.querySelectorAll('#classbar .classopt').forEach(el=>{
+    const c = parseFloat(el.dataset.c);
+    el.classList.toggle('recommended', c===reco);
+    el.classList.toggle('selected', c===uClass);
+  });
+
+  // match badge + note
+  const cov=document.getElementById('cov'); let cls,lbl,note;
+  if(uClass===reco){cls='good';lbl='Ideális méret';note='A kiválasztott készülék pont megfelel ehhez a helyiséghez.';}
+  else if(uClass>reco){cls='good';lbl='Bőven elég';note='A kiválasztott készülék nagyobb a szükségesnél — ez is működik, csak általában drágább.';}
+  else {cls='bad';lbl='Kisebb a kelleténél';note='Ehhez a mérethez inkább '+fmtKW(reco)+' kW-os készülék ajánlott.';}
+  cov.className='cov '+cls;
+  document.getElementById('covText').textContent=lbl;
+  document.getElementById('classnote').textContent=note;
+
+  // heating info (no SCOP)
+  const showHeat = (state.use==='heat' || state.use==='both');
+  document.getElementById('heatCallout').style.display = showHeat ? 'flex' : 'none';
+  if(showHeat){ document.getElementById('heatKwTxt').textContent = fmtKW(u.heatKw)+' kW'; }
+
+  // selected unit summary
+  document.getElementById('selImg').src = u.img;
+  document.getElementById('selName').textContent = u.name;
+  document.getElementById('selSpec').textContent = `${u.brand} · ${fmtKW(u.cool)}/${fmtKW(u.heatKw)} kW · ${fmtHUFb(u.price)} Ft`;
+
+  // PRICE (deterministic)
+  const extraM = Math.max(0, state.pipe - PRICING.includedPipe);
+  const extraPipe = extraM * PRICING.extraPipePerM;
+  const concrete = state.concrete ? PRICING.concrete : 0;
+  const dekor = state.dekor ? PRICING.dekorPerM * state.dekorLen : 0;
+  const total = u.price + PRICING.install + concrete + extraPipe + dekor;
+
+  const lines = [
+    {b:u.name, s:`${fmtKW(u.cool)} kW hűtés · ${fmtKW(u.heatKw)} kW fűtés`, a:u.price},
+    {b:'Telepítés (alapdíj)', s:'Teljes szerelés + 3 m csővezeték, mindent tartalmaz', a:PRICING.install},
+  ];
+  if(concrete) lines.push({b:'Betonszerkezet pótdíj', s:'Keményebb fúrás', a:concrete});
+  if(extraPipe) lines.push({b:`További csővezeték (${extraM} m)`, s:'10 000 Ft / méter 3 m felett', a:extraPipe});
+  if(dekor) lines.push({b:`Dekorcsatorna (${state.dekorLen} m)`, s:'Esztétikus csőtakaró · 1 400 Ft / méter', a:dekor});
+
+  document.getElementById('lines').innerHTML = lines.map(x=>
+    `<div class="line"><span class="lbl"><b>${x.b}</b><small>${x.s}</small></span><span class="amt">${fmtHUF(x.a)}</span></div>`).join('');
+  document.getElementById('totalV').textContent = fmtHUFb(total);
+
+  state._calc = { use:state.use, needKw, total, extraM, concrete:!!concrete, dekor:!!dekor, dekorM:state.dekorLen };
+}
+
+const areaEl=document.getElementById('area'), pipeEl=document.getElementById('pipe');
+function paint(el){const p=(el.value-el.min)/(el.max-el.min)*100; el.style.setProperty('--p',p+'%');}
+areaEl.addEventListener('input',()=>{state.area=+areaEl.value;document.getElementById('areaV').textContent=areaEl.value;paint(areaEl);calc();});
+pipeEl.addEventListener('input',()=>{state.pipe=+pipeEl.value;document.getElementById('pipeV').textContent=pipeEl.value;paint(pipeEl);calc();});
+document.getElementById('concrete').addEventListener('change',e=>{state.concrete=e.target.checked;calc();});
+const dekorLenEl=document.getElementById('dekorLen');
+document.getElementById('dekor').addEventListener('change',e=>{state.dekor=e.target.checked;document.getElementById('dekorLenField').style.display=e.target.checked?'block':'none';if(e.target.checked)paint(dekorLenEl);calc();});
+dekorLenEl.addEventListener('input',()=>{state.dekorLen=+dekorLenEl.value;document.getElementById('dekorLenV').textContent=dekorLenEl.value;paint(dekorLenEl);calc();});
+document.querySelectorAll('#useSeg button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('#useSeg button').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on'); state.use=b.dataset.v; calc();
+}));
+
+function requestCallback(){
+  const c=state._calc, useLbl={cool:'Hűtés',heat:'Fűtés',both:'Hűtés-fűtés'}[c.use];
+  document.getElementById('attachBox').style.display='flex';
+  document.getElementById('attachText').innerHTML=`<b>Csatolt kalkuláció:</b> ${state.unit.name} · ${useLbl} · ${state.area} m² · ${fmtHUFb(c.total)} Ft`;
+  document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+  setTimeout(()=>document.getElementById('cname').focus(),500);
+}
+async function submitForm(){
+  const name=document.getElementById('cname').value.trim(), phone=document.getElementById('cphone').value.trim(), consent=document.getElementById('cconsent').checked;
+  const email=document.getElementById('cemail').value.trim(), msg=document.getElementById('cmsg').value.trim();
+  if(!name||!phone){alert('Kérjük, adja meg a nevét és telefonszámát.');return;}
+  if(!consent){alert('Kérjük, fogadja el az adatkezelési tájékoztatót.');return;}
+  const c=state._calc, useLbl=c?{cool:'Hűtés',heat:'Fűtés',both:'Hűtés-fűtés'}[c.use]:'';
+  const calcLine=c?`${state.unit.name} · ${useLbl} · ${state.area} m²${c.concrete?' · beton':''}${c.extraM?' · +'+c.extraM+' m cső':''}${c.dekor?' · dekorcsatorna '+c.dekorM+' m':''} · ${fmtHUFb(c.total)} Ft`:'—';
+  const btn=document.querySelector('.submit-btn'); if(btn){btn.disabled=true;btn.textContent='Küldés...';}
+  try{
+    const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({
+      access_key:'YOUR_WEB3FORMS_ACCESS_KEY',
+      subject:'Új ajánlatkérés — Four Seasons Klíma',
+      from_name:'Four Seasons Klíma weboldal',
+      'Név':name,'Telefon':phone,'E-mail':email||'—','Üzenet':msg||'—','Kalkuláció':calcLine
+    })});
+    const data=await res.json();
+    if(!data.success) throw new Error('fail');
+  }catch(err){
+    if(btn){btn.disabled=false;btn.textContent='Visszahívást kérek';}
+    alert('A küldés most nem sikerült. Kérjük, hívjon a 06-20-504-4161 számon, vagy próbálja újra.');
+    return;
+  }
+  document.getElementById('recap').innerHTML=`
+    <div class="rr"><span>Név</span><span>${name}</span></div>
+    <div class="rr"><span>Telefon</span><span>${phone}</span></div>
+    ${email?`<div class="rr"><span>E-mail</span><span>${email}</span></div>`:''}
+    ${c?`<div class="rr"><span>Készülék</span><span>${state.unit.name}</span></div><div class="rr"><span>Kalkulált ár</span><span>${fmtHUFb(c.total)} Ft</span></div>`:''}`;
+  document.getElementById('formInner').style.display='none';
+  document.getElementById('success').style.display='block';
+  document.getElementById('success').scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+const FEATURED = 'gree-cp35'; // a kiemelt termék azonosítója — ezt az egy sort átírva cserélhető a kiemelt gép
+function renderHero(){
+  const u = UNITS.find(x=>x.id===FEATURED) || UNITS[0];
+  document.getElementById('heroImg').src = u.img;
+  document.getElementById('heroImg').alt = u.name;
+  document.getElementById('heroName').textContent = u.name;
+  document.getElementById('heroBrand').textContent = u.brand + ' · ' + u.en + ' · R32';
+  document.getElementById('heroSpecs').innerHTML =
+    '<div><span>Hűtés</span><b>'+fmtKW(u.cool)+' kW</b></div>'+
+    '<div><span>Fűtés</span><b>'+fmtKW(u.heatKw)+' kW</b></div>'+
+    '<div><span>Ajánlott</span><b>'+roomRange(u.cool)+'</b></div>';
+  document.getElementById('heroPrice').textContent = fmtHUFb(u.price) + ' Ft';
+  const cta = document.querySelector('.hf-cta');
+  if(cta) cta.addEventListener('click', function(){ state.unit = u; renderUnits(); calc(); });
+}
+paint(areaEl); paint(pipeEl); renderHero(); renderUnits(); calc();
+</script>
+</Layout>
