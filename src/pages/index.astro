@@ -447,7 +447,7 @@ async function submitForm(){
   const btn=document.querySelector('.submit-btn'); if(btn){btn.disabled=true;btn.textContent='Küldés...';}
   try{
     const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({
-      access_key:'YOUR_WEB3FORMS_ACCESS_KEY',
+      access_key:'da678219-a397-4532-9caa-601ae3165b72',
       subject:'Új ajánlatkérés — Four Seasons Klíma',
       from_name:'Four Seasons Klíma weboldal',
       'Név':name,'Telefon':phone,'E-mail':email||'—','Üzenet':msg||'—','Kalkuláció':calcLine
